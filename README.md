@@ -18,7 +18,7 @@ Estrutura de Diretórios
 
 Como Executar (Ambiente On-Premise)
 
-1. Copie o ficheiro de ambiente:
+1.Copie o ficheiro de ambiente:
 
 ~~~bash
 cp .env.example .env
