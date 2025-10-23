@@ -6,21 +6,23 @@ Este é o Monorepo para o novo Sistema de Relatórios ERP. Ele contém o serviç
 
 Estrutura de Diretórios
 
-* ´/backend´: Contém a aplicação Python (FastAPI) que lida com a lógica de negócio, enriquecimento de dados e comunicação com a API do ERP.
+* `/backend`: Contém a aplicação Python (FastAPI) que lida com a lógica de negócio, enriquecimento de dados e comunicação com a API do ERP.
 
-/frontend: Contém a aplicação React (Vite) que serve como interface do usuário (UI).
+* `/frontend`: Contém a aplicação React (Vite) que serve como interface do usuário (UI).
 
-/docker-compose.yml: Orquestra a execução dos serviços de backend e frontend em um ambiente de desenvolvimento ou produção.
+`/docker-compose.yml`: Orquestra a execução dos serviços de backend e frontend em um ambiente de desenvolvimento ou produção.
 
-/Jenkinsfile: Define o pipeline de CI/CD para testes e implantação automatizados.
+`/Jenkinsfile`: Define o pipeline de CI/CD para testes e implantação automatizados.
 
-/.env.example: Ficheiro de exemplo para as variáveis de ambiente necessárias.
+`/.env.example`: Ficheiro de exemplo para as variáveis de ambiente necessárias.
 
 Como Executar (Ambiente On-Premise)
 
 Copie o ficheiro de ambiente:
 
+~~~bash
 cp .env.example .env
+~~~
 
 
 Preencha as variáveis no ficheiro .env com as credenciais reais do ERP.
