@@ -6,7 +6,7 @@ Este é o Monorepo para o novo Sistema de Relatórios ERP. Ele contém o serviç
 
 Estrutura de Diretórios
 
-/backend: Contém a aplicação Python (FastAPI) que lida com a lógica de negócio, enriquecimento de dados e comunicação com a API do ERP.
+* /backend: Contém a aplicação Python (FastAPI) que lida com a lógica de negócio, enriquecimento de dados e comunicação com a API do ERP.
 
 /frontend: Contém a aplicação React (Vite) que serve como interface do usuário (UI).
 
