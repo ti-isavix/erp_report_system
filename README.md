@@ -18,7 +18,7 @@ Estrutura de Diretórios
 
 Como Executar (Ambiente On-Premise)
 
-1.Copie o ficheiro de ambiente:
+1. Copie o ficheiro de ambiente:
 
 ~~~bash
 cp .env.example .env
@@ -27,13 +27,14 @@ cp .env.example .env
 
 2. Preencha as variáveis no ficheiro .env com as credenciais reais do ERP.
 
-Construa e execute os containers:
+3. Construa e execute os containers:
 
+~~~bash
 docker-compose up --build -d
+~~~
 
+4. Aceda à aplicação:
 
-Aceda à aplicação:
+* O portal (frontend) estará disponível em: http://localhost
 
-O portal (frontend) estará disponível em: http://localhost
-
-A API (backend) estará disponível em: http://localhost/api (via proxy do Nginx)
+* A API (backend) estará disponível em: http://localhost/api (via proxy do Nginx)
