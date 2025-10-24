@@ -1,12 +1,23 @@
-FROM python:3.14-slim
+FROM node:20-alpine AS builder
 
-WORKDIR /app
-COPY ./requirements.txt ./
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm install
 
-RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
 
-COPY ./src/ ./src/
+RUN npm run build
 
-EXPOSE 8000
+FROM node:20-alpine
 
-CMD [ "uvicorn", "erp_report_generator.main:app", "--host", "0.0.0.0", "--port", "8000" ]
+WORKDIR package*.json ./
+
+RUN npm install --omit=dev
+
+COPY --from=builder /usr/src/app/dist ./dist
+
+ENV PORT=3333
+
+EXPOSE ${PORT}
+
+CMD [ "node", "dist/main.js" ]
