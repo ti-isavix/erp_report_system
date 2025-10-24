@@ -206,15 +206,23 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-# Ignorar dependências de backend
-backend/.venv/
-backend/.pytest_cache/
-backend/pycache/
+# Dependencies
+/node_modules
 
-#Ignorar ficheiro de ambiente local
+# Build files
+/dist
+
+# Environment variables
 .env
 
-#Ignorar dependências de frontend
-frontend/node_modules/
-frontend/dist/
+# Log files
+*.log
+npm-debug.log*
 
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/Editor folders
+.vscode/
+.idea/

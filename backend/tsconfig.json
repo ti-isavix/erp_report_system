@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    /* Type Checking */
+    "strict": true, // Habilita todas as checagens estritas de tipo. Essencial para um código seguro.
+    "noImplicitAny": true, // Exige que todas as variáveis tenham um tipo definido.
+
+    /* Modules */
+    "module": "commonjs", // O sistema de módulos padrão do Node.js.
+    "rootDir": "./src", // Onde nosso código .ts está localizado.
+    "resolveJsonModule": true,
+
+    /* Emit */
+    "outDir": "./dist", // Onde o código .js compilado será salvo.
+    "sourceMap": true, // Gera arquivos .map para facilitar a depuração.
+
+    /* Language and Environment */
+    "target": "es2021", // Compila para uma versão moderna do JavaScript, compatível com Node.js LTS.
+    "lib": ["es2021"],
+
+    /* Interop */
+    "esModuleInterop": true, // Melhora a compatibilidade entre módulos CommonJS e ES Modules.
+    "forceConsistentCasingInFileNames": true, // Garante que os imports usem o mesmo case do nome do arquivo.
+
+    /* Completeness */
+    "skipLibCheck": true // Pula a checagem de tipos dos arquivos de declaração (.d.ts).
+  },
+  "include": ["src/**/*"], // Quais arquivos o compilador deve considerar.
+  "exclude": ["node_modules", "dist"] // Quais pastas devem ser ignoradas.
+}
